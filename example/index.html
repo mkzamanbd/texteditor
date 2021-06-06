@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CKEditor 5 ClassicEditor build</title>
+	<title>CKEditor 5 ClassicEditor build</title>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div class="editor"></div>
-    
-    <!-- Javascript -->
-    <script src="../build/ckeditor.js"></script>
-    <script>
-		ClassicEditor.create( document.querySelector( '.editor' ), {
-			
+
+	<div class="editor"></div>
+
+	<!-- Javascript -->
+	<script src="../build/ckeditor.js"></script>
+	<script>
+		ClassicEditor.create(document.querySelector('.editor'), {
+
 			uploadAdapter: {
 				/* URL to server-side HTTP endpoint 
 				 * Mandatory
 				 */
-				uploadUrl: 'upload.php', 
-				
+				uploadUrl: 'upload.php',
+
 				// CSRF token 
 				// token : '[YOUR-CSRF-TOKEN]', 
-				
+
 				/* Optional. 
 				 * Eg. in asp.net core for CSRF prevention you would 
 				 * have headers : { "RequestVerificationToken": _serverSideGeneratedCSRFToken }
@@ -37,14 +39,15 @@
 				// } 
 			},
 			licenseKey: '',
-			}).then( editor => {
-				window.editor = editor;
-			}).catch( error => {
-				console.error( 'Oops, something went wrong!' );
-				console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-				console.warn( 'Build id: a0emjmohjnf9-ihf6bicpf4av' );
-				console.error( error );
-			} );
+		}).then(editor => {
+			window.editor = editor;
+		}).catch(error => {
+			console.error('Oops, something went wrong!');
+			console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
+			console.warn('Build id: a0emjmohjnf9-ihf6bicpf4av');
+			console.error(error);
+		});
 	</script>
 </body>
+
 </html>
