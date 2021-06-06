@@ -17,43 +17,7 @@
     <script src="../build/ckeditor.js"></script>
     <script>
 		ClassicEditor.create( document.querySelector( '.editor' ), {
-			toolbar: {
-				items: [
-					'bold',
-					'italic',
-					'link',
-					'|',
-					'bulletedList',
-					'numberedList',
-					'|',
-					'insertTable',
-					'|',
-					'alignment',
-					'|',
-					'imageInsert',
-					'|',
-					'MathType',
-					'ChemType',
-					'|',
-					'undo',
-					'redo'
-				]
-			},
-			language: 'en',
-			image: {
-				toolbar: [
-					'imageTextAlternative',
-					'imageStyle:full',
-					'imageStyle:side'
-				]
-			},
-			table: {
-				contentToolbar: [
-					'tableColumn',
-					'tableRow',
-					'mergeTableCells'
-				]
-			},
+			
 			uploadAdapter: {
 				/* URL to server-side HTTP endpoint 
 				 * Mandatory

@@ -108,41 +108,23 @@ This file is licensed under the terms of the MIT License (see LICENSE.md).
 	<script src="../build/ckeditor.js"></script>
 	<script>
 		ClassicEditor.create( document.querySelector( '.editor' ), {
-			toolbar: {
-				items: [
-					'bold',
-					'italic',
-					'|',
-					'bulletedList',
-					'numberedList',
-					'|',
-					'insertTable',
-					'|',
-					'alignment',
-					'|',
-					'imageInsert',
-					'|',
-					'MathType',
-					'ChemType',
-					'|',
-					'undo',
-					'redo'
-				]
-			},
-			language: 'en',
-			image: {
-				toolbar: [
-					'imageTextAlternative',
-					'imageStyle:full',
-					'imageStyle:side'
-				]
-			},
-			table: {
-				contentToolbar: [
-					'tableColumn',
-					'tableRow',
-					'mergeTableCells'
-				]
+			uploadAdapter: {
+				/* URL to server-side HTTP endpoint 
+				 * Mandatory
+				 */
+				uploadUrl: 'upload.php', 
+				
+				// CSRF token 
+				// token : '[YOUR-CSRF-TOKEN]', 
+				
+				/* Optional. 
+				 * Eg. in asp.net core for CSRF prevention you would 
+				 * have headers : { "RequestVerificationToken": _serverSideGeneratedCSRFToken }
+				 */
+				// headers : { 
+				// 	"headerKey1": "headerValue1", 
+				// 	"headerKey2": "headerValue2" 
+				// } 
 			},
 			licenseKey: '',
 			}).then( editor => {
