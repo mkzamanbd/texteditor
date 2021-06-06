@@ -7,6 +7,7 @@ import Alignment from "@ckeditor/ckeditor5-alignment/src/alignment.js";
 import Autoformat from "@ckeditor/ckeditor5-autoformat/src/autoformat.js";
 import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold.js";
 import Essentials from "@ckeditor/ckeditor5-essentials/src/essentials.js";
+import Heading from "@ckeditor/ckeditor5-heading/src/heading";
 import Image from "@ckeditor/ckeditor5-image/src/image.js";
 import ImageCaption from "@ckeditor/ckeditor5-image/src/imagecaption.js";
 import ImageInsert from "@ckeditor/ckeditor5-image/src/imageinsert.js";
@@ -36,6 +37,7 @@ Editor.builtinPlugins = [
   Autoformat,
   Bold,
   Essentials,
+  Heading,
   Image,
   ImageCaption,
   ImageInsert,
@@ -60,6 +62,8 @@ Editor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
   toolbar: {
     items: [
+      "heading",
+      "|",
       "bold",
       "italic",
       "link",
